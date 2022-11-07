@@ -122,18 +122,14 @@ nav ul li {
 
 /* NEW ARRIVALS */
     
-.carousel-container {
-  background-color: #773300;
-}
-
-.carousel-item {
-  width: 100%;
-  opacity: calc(60%);
-}
-
-.first-slide {
+.img1 {
   width: 100%;
   opacity:calc(100%) !important
+}
+
+.carousel-item img {
+  width: 100%;
+  opacity: calc(60%);
 }
 
 .newarrival {
@@ -152,6 +148,20 @@ nav ul li {
   border-width: 8px;
 }
 
+.slider-btn {
+  text-decoration: none;
+}
+
+.atocbtn-inner {
+  background-color: rgb(161, 89, 22) !important;
+}
+
+.cobtn-inner {
+  text-decoration:none; 
+  background-color: hsl(94, 75%, 22%) !important;
+
+}
+
 .checked {  
   color : rgb(255, 230, 0);  
   font-size : 20px;  
@@ -160,7 +170,54 @@ nav ul li {
 .unchecked {  
   color: rgb(151, 150, 150);
   font-size : 20px;  
-}  
+}
+
+.carousel  {
+  background-color: hsl(94, 75%, 22%);
+}
+
+
+.carousel-containerb {
+  background-color: hsl(94, 75%, 22%);
+}
+
+.bs {
+  opacity: 100% !important;
+}
+
+.actvbtn {
+  height: 15px;
+   width:15px; 
+   border:1px; 
+   border-radius: 15px;
+}
+
+.crsbtn {
+  height: 15px; 
+  width:15px; 
+  border:1px; 
+  border-radius: 15px;
+}
+
+.soldoutbtn1 {
+  background-color: hsl(94, 75%, 22%) !important;
+}
+
+.soldoutbtn2 {
+  background-color: rgb(161, 89, 22) !important;
+}
+
+.offer {
+  font-style:italic;
+}
+
+.sellingbtn1 {
+  background-color: hsl(94, 75%, 22%) !important;
+}
+
+.sellingbtn2 {
+  background-color: rgb(161, 89, 22) !important;
+}
 
 .bestsellers {
   color: hsl(94, 75%, 22%);
@@ -202,31 +259,32 @@ nav ul li {
 }
 
 @media screen and (max-width: 1440px) {
-.banner-logo {
-height: 500px;
+  .banner-logo {
+    height: 500px;
 }
 
 }
 @media screen and (max-width: 1330px) {
-.banner-logo {
-height: 400px;
+  .banner-logo {
+    height: 400px;
 }
 }
 
 @media screen and (max-width: 1024px) {
-.banner-logo {
-height: 300px;
+  .banner-logo {
+    height: 300px;
 }
-.slider-btn {
-font-size: 20px !important;
-margin: 0;
+  .slider-btn {
+    font-size: 20px !important;
+    margin: 0;
 }
-.carcapt {
-position: absolute; 
-top:calc(50% - 150px); 
-left:0;
-right:0;
-text-align:center;
+
+  .carcapt {
+    position: absolute; 
+    top:calc(50% - 150px); 
+    left:0;
+    right:0;
+    text-align:center;
 }
 
 @media screen and (max-width: 780px) {
