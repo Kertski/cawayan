@@ -26,7 +26,7 @@ function NewArrivals() {
                                 <span className ="fa fa-star checked"></span> (3) 
                                 </div> 
                                 <div>
-                                    <a href="checkout_page.html" className="sliderbtn m-1"><button className="btn click-btn btn-default text-white cobtn-inner">Buy Now</button></a>
+                                    <a href="/checkout" className="sliderbtn m-1"><button className="btn click-btn btn-default text-white cobtn-inner">Buy Now</button></a>
                                     <button className="btn click-btn btn-default text-white atocbtn-inner">Add to Cart</button>
                                 </div>
                                 </div>
@@ -50,7 +50,7 @@ function NewArrivals() {
                                 <span className ="fa fa-star unchecked"></span> (5) 
                                 </div> 
                                 <div>
-                                <a href="checkout_page.html" className="sliderbtn m-1"><button className="btn click-btn btn-default text-white cobtn-inner">Buy Now</button></a>
+                                <a href="/checkout" className="sliderbtn m-1"><button className="btn click-btn btn-default text-white cobtn-inner">Buy Now</button></a>
                                 <button className="btn click-btn btn-default text-white atocbtn-inner">Add to Cart</button>
                                 </div>
                                 </div>
@@ -74,7 +74,7 @@ function NewArrivals() {
                                 <span className ="fa fa-star unchecked"></span>
                                 </div> 
                                 <div>
-                                <a href="checkout_page.html" className="sliderbtn m-1"><button className="btn click-btn btn-default text-white cobtn-inner">Buy Now</button></a>
+                                <a href="/checkout" className="sliderbtn m-1"><button className="btn click-btn btn-default text-white cobtn-inner">Buy Now</button></a>
                                 <button className="btn click-btn btn-default text-white atocbtn-inner">Add to Cart</button>
                                 </div>
                                 </div>
@@ -98,7 +98,7 @@ function NewArrivals() {
                                 <span className ="fa fa-star checked"></span> (2) 
                                 </div> 
                                 <div>
-                                <a href="checkout_page.html" className="sliderbtn m-1"><button className="btn click-btn btn-default text-white cobtn-inner">Buy Now</button></a>
+                                <a href="/checkout" className="sliderbtn m-1"><button className="btn click-btn btn-default text-white cobtn-inner">Buy Now</button></a>
                                 <button className="btn click-btn btn-default text-white atocbtn-inner">Add to Cart</button>
                                 </div>
                                 </div>
@@ -122,7 +122,7 @@ function NewArrivals() {
                                 <span className ="fa fa-star unchecked"></span>
                                 </div> 
                                 <div>
-                                <a href="checkout_page.html" className="sliderbtn m-1"><button className="btn click-btn btn-default text-white cobtn-inner">Buy Now</button></a>
+                                <a href="/checkout" className="sliderbtn m-1"><button className="btn click-btn btn-default text-white cobtn-inner">Buy Now</button></a>
                                 <button className="btn click-btn btn-default text-white atocbtn-inner">Add to Cart</button>
                                 </div>
                                 </div>
@@ -146,7 +146,7 @@ function NewArrivals() {
                                 <span className ="fa fa-star checked"></span> (3) 
                                 </div> 
                                 <div>
-                                <a href="checkout_page.html" className="sliderbtn m-1"><button className="btn click-btn btn-default text-white cobtn-inner">Buy Now</button></a>
+                                <a href="/checkout" className="sliderbtn m-1"><button className="btn click-btn btn-default text-white cobtn-inner">Buy Now</button></a>
                                 <button className="btn click-btn btn-default text-white atocbtn-inner">Add to Cart</button>
                                 </div>
                                 </div>
@@ -160,4 +160,4 @@ function NewArrivals() {
   )
 }
 
-export default NewArrivals
+export default NewArrivals;

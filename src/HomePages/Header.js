@@ -1,9 +1,9 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 function Header() {
     return (
-        <React.Fragment>
-            <div>
+            <div className='sticky-top'>
                 <header className='header'>
                     <nav className="navbar navbar-expand-lg">
                         <div className="container-fluid">
@@ -14,32 +14,27 @@ function Header() {
                         <div className="collapse navbar-collapse" id="collapsibleNavbar">
                             <ul className="navbar-nav">
                                 <li className="nav-item">
-                                    <a className="nav-link" href="#top">Home</a>
-                                </li>
+                                    <Link to="/">Home</Link></li>
                                 <li className="nav-item">
-                                    <a className="nav-link" href="index.html#newarrival">Shop</a>
-                                </li>
+                                    <Link to="/about">About</Link></li>
                                 <li className="nav-item">
-                                    <a className="nav-link" href="index.html#blogs">Blogs</a>
+                                    <a className="nav-link" href=".#blogs">Blogs</a>
                                 </li>  
                                 <li className="nav-item">
-                                    <a className="nav-link" href="about_us.html">About Us</a>
+                                    <Link to="/contact">Contact Us</Link>
                                 </li>
-                                <li className="nav-item">
-                                    <a className="nav-link" href="contact.html">Contact Us</a>
-                                </li> 
                             </ul>
                         </div>
                         <div className="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
                             <ul className="navbar-nav">
                                 <li className="nav-item">
-                                    <a className="nav-link cart-icon" href="my_cart.html"><i className="fa fa-shopping-cart"></i></a>
+                                    <Link to="/cart"><i class="fa fa-shopping-cart"></i></Link>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link" href="header">Register</a>
+                                    <Link to="/register">Register</Link>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link" href="log_in.html">Log In</a>
+                                    <Link to="/login">Login</Link>
                                 </li> 
                             </ul>
                         </div>
@@ -47,7 +42,6 @@ function Header() {
                     </nav>
                 </header>
             </div>
-        </React.Fragment>
   )
 }
 

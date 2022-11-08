@@ -1,18 +1,29 @@
 import React from 'react';
 import './App.css';
-import BannerSlide from './BannerSlide';
-import BestSellers from './BestSellers';
-import Header from './Header';
-import NewArrivals from './NewArrivals';
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
+import Home from './Home';
+import About from './About';
+import Contact from './Contact';
+import Cart from './Cart';
+import Register from './Register';
+import Login from './Login';
+import CheckoutPage from './CheckoutPage';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <Header />
-      <BannerSlide/>
-      <NewArrivals/>
-      <BestSellers/>
-    </div>
+    <>
+      <Router>
+            <Routes>
+                <Route path="/" element={<Home/>}/>
+                <Route path="/about" element={<About/>}/>
+                <Route path="/contact" element={<Contact/>}/>
+                <Route path="/cart" element={<Cart/>}/>
+                <Route path="/register" element={<Register/>}/>
+                <Route path="/login" element={<Login/>}/>
+                <Route path="/checkout" element={<CheckoutPage/>}/>
+            </Routes>
+        </Router>
+    </>
   );
 }
 
