@@ -20,7 +20,7 @@ function Register() {
                                         <input className="form-control" type="text" name="first-name" required/>
                                     </div>
                                     <div className="col my-3">
-                                        <label className="form-label createacclabel">Email</label>
+                                        <label className="form-label createacclabel">Email </label>
                                         <input className="form-control" type="email" name="email" required placeholder="'example@gmail.com'"/>
                                     </div>
                                 </div>
