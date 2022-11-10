@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import SearchBar from '../Search'
 
 function Header() {
     return (
@@ -27,6 +28,9 @@ function Header() {
                         </div>
                         <div className="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
                             <ul className="navbar-nav">
+                                <li className="nav-item">
+                                    <SearchBar />
+                                </li>
                                 <li className="nav-item">
                                     <Link to="/cart"><i class="fa fa-shopping-cart"></i></Link>
                                 </li>
