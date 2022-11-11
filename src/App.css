@@ -90,10 +90,91 @@ nav ul li:hover{
 .nav-link:focus {
   color: white;
 }
+
+.nav-link .nav-item:hover {
+  background-color: none;
+}
   
+.nav1:hover {
+  background-color: hsl(94, 75%, 22%) !important;
+}
+
 nav ul li {
   display: flex;
   padding: 0px 10px;
+}
+
+.searchInputs {
+  display: flex;
+  position: relative;
+  background-color: white !important;
+  
+}
+
+.search input {
+  background-color: white;
+  border: 0;
+  border-radius: 2px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  font-size: 18px;
+  height: 40px;
+  width: 300px;
+  padding: 10px;
+}
+
+input:focus {
+  outline: none;
+}
+
+.dataResult {
+  margin-top: 5px;
+  width: 300px;
+  height: auto;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  overflow: hidden;
+  overflow-y: auto;
+  color: black;
+  position: absolute;
+}
+
+.fa-magnifying-glass, .fa-delete{
+  color: hsl(94, 75%, 22%);
+  font-size: 20px;
+  justify-content: center;
+  background-color: white;
+  float: right;
+  padding: 10px;
+}
+
+.dataResult::-webkit-scrollbar {
+  display: none;
+}
+
+.dataResult .dataItem {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  color: black;
+}
+
+.dataItem {
+  margin-left: 10px ;
+  font-size: 15px;
+}
+a {
+  text-decoration: none;
+}
+
+.dataItemContainer:hover {
+  background-color: lightgrey;
+  padding: 0;
+}
+
+#clearBtn {
+  cursor: pointer;
 }
 
 @media screen and (max-width: 782px) {

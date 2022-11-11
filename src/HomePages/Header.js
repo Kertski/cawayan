@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import SearchBar from '../Search'
+import SearchBar from './SearchBar'
+import ProductData from '../Products.json'
 
 function Header() {
     return (
@@ -15,30 +16,33 @@ function Header() {
                         <div className="collapse navbar-collapse" id="collapsibleNavbar">
                             <ul className="navbar-nav">
                                 <li className="nav-item">
-                                    <Link to="/">Home</Link></li>
+                                    <Link to="/" className='nav-link'>Home</Link></li>
                                 <li className="nav-item">
-                                    <Link to="/about">About</Link></li>
+                                    <Link to="/about" className='nav-link'>About</Link></li>
+                                <li className="nav-item">
+                                    <a className="nav-link" href=".#newarrival">Shop</a>
+                                </li>
                                 <li className="nav-item">
                                     <a className="nav-link" href=".#blogs">Blogs</a>
                                 </li>  
                                 <li className="nav-item">
-                                    <Link to="/contact">Contact Us</Link>
+                                    <Link to="/contact" className='nav-link'>Contact Us</Link>
                                 </li>
                             </ul>
                         </div>
                         <div className="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
-                            <ul className="navbar-nav">
-                                <li className="nav-item">
-                                    <SearchBar />
+                            <ul className="navbar-nav nav1">
+                                <li className="nav-item nav1">
+                                    <SearchBar/>
                                 </li>
                                 <li className="nav-item">
-                                    <Link to="/cart"><i class="fa fa-shopping-cart"></i></Link>
+                                    <Link to="/cart" className='nav-link'><i class="fa fa-shopping-cart"></i></Link>
                                 </li>
                                 <li className="nav-item">
-                                    <Link to="/register">Register</Link>
+                                    <Link to="/register" className='nav-link'>Register</Link>
                                 </li>
                                 <li className="nav-item">
-                                    <Link to="/login">Login</Link>
+                                    <Link to="/login" className='nav-link'>Login</Link>
                                 </li> 
                             </ul>
                         </div>

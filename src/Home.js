@@ -7,6 +7,7 @@ import FeaturedBlog from './HomePages/FeaturedBlog';
 import Footer from './HomePages/Footer';
 import NewArrivals from './HomePages/NewArrivals';
 import Header from './HomePages/Header';
+import ProductDetails from './Products/ProductDetails';
 
 function Home() {
   return (
@@ -18,6 +19,7 @@ function Home() {
       <CustomerReviews/>
       <ComingSoon/>
       <FeaturedBlog/>
+      <ProductDetails/>
       <Footer/>
     </div>
   )
