@@ -1,7 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import SearchBar from './SearchBar'
-import ProductData from '../Products.json'
 
 function Header() {
     return (
