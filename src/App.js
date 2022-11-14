@@ -10,6 +10,7 @@ import Register from './Register';
 import Login from './Login';
 import CheckoutPage from './CheckoutPage';
 import Productlist from './productlist';
+import OrderList from './OrderList';
 
 const App = () => {
 
@@ -59,6 +60,7 @@ const App = () => {
                 <Route path="/checkout" element={<CheckoutPage cart={cart}/>}/>
                 <Route path="/admin" element={<Admin/>}/>
                 <Route path="/admin/products" element={<Productlist/>}/>
+
             </Routes>
         </Router>
     </>

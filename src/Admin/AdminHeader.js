@@ -16,12 +16,11 @@ function AdminHeader() {
                         <div className="collapse navbar-collapse" id="collapsibleNavbar">
                             <ul className="navbar-nav">
                                 <li className="nav-item">
-                                    <Link to="/" className='nav-link'>Summary</Link></li>
+                                    <Link to="/admin" className='nav-link'>Dashboard</Link></li>
                                 <li className="nav-item">
-                                    <Link to="/admin/products" className='nav-link'>Products</Link></li>
+                                    <Link to="/products" className='nav-link'>Products</Link></li>
                                 <li className="nav-item">
-                                    <a className="nav-link" href=".#newarrival">Orders</a>
-                                </li>
+                                <Link to="/orderlist" className='nav-link'>Orders</Link></li>
                                 <li className="nav-item">
                                     <a className="nav-link" href=".#blogs">Users</a>
                                 </li>  
