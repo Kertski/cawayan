@@ -9,12 +9,19 @@ import NewArrivals from './HomePages/NewArrivals';
 import Header from './HomePages/Header';
 import ProductDetails from './Products/ProductDetails';
 
-function Home() {
+function Home({handleClick, cart, warning}) {
+
+
   return (
     <div>
-      <Header/>
+      
+      <Header size={cart.length} cart={cart}/>
+      
       <BannerSlide/>
-      <NewArrivals/>
+      <NewArrivals handleClick={handleClick}/>
+      {
+        warning && <div className='warning'>Item is already added to your cart</div>
+      }
       <BestSellers/>
       <CustomerReviews/>
       <ComingSoon/>

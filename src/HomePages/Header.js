@@ -2,7 +2,8 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import SearchBar from './SearchBar'
 
-function Header() {
+function Header({size}) {
+
     return (
             <div className='sticky-top'>
                 <header className='header'>
@@ -35,7 +36,7 @@ function Header() {
                                     <SearchBar/>
                                 </li>
                                 <li className="nav-item">
-                                    <Link to="/cart" className='nav-link'><i class="fa fa-shopping-cart"></i></Link>
+                                    <Link to="/cart" className='nav-link'><i class="fa fa-shopping-cart"></i><span className='cartitems'>{size}</span></Link>
                                 </li>
                                 <li className="nav-item">
                                     <Link to="/register" className='nav-link'>Register</Link>

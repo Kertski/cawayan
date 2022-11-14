@@ -2,10 +2,11 @@ import React from 'react'
 import Footer from './HomePages/Footer'
 import Header from './HomePages/Header'
 
-function CheckoutPage() {
+function CheckoutPage({cart}) {
+    
   return (
     <div>
-        <Header/>
+        <Header size={cart.length}/>
             <section className="pt-5 pb-5 flex">
                 <div className="container checkoutcontainer">
                     <h1 className="px-3">Checkout</h1>
