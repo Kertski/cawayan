@@ -10,6 +10,7 @@ import Register from './Register';
 import Login from './Login';
 import CheckoutPage from './CheckoutPage';
 import Productlist from './productlist';
+import OrderList from './OrderList';
 
 const App = () => {
   return (
@@ -24,7 +25,8 @@ const App = () => {
                 <Route path="/login" element={<Login/>}/>
                 <Route path="/checkout" element={<CheckoutPage/>}/>
                 <Route path="/admin" element={<Admin/>}/>
-                <Route path="/admin/products" element={<Productlist/>}/>
+                <Route path="/orderlist" element={<OrderList/>}/>
+                <Route path="/products" element={<Productlist/>}/>
 
             </Routes>
         </Router>
