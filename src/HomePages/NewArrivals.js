@@ -14,10 +14,6 @@ function NewArrivals({handleClick}) {
         });
     },[]);
 
-    const [cart, setCart] = useState ([]);
-    
-
-
   return (
     
     <div>

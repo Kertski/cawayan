@@ -35,7 +35,7 @@ function Cart({cart, setCart, handleChange}) {
                             cart.map((item)=> (
                                 <div className="cart_box" key={item.id}>
                                 <div className="cart_img">
-                                    <img src={item.Image} alt="image" />
+                                    <img src={item.Image} alt="" />
                                     <p>{item.Description}</p>
                                 </div>
                                 <div>

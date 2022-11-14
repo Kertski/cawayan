@@ -10,7 +10,6 @@ import Register from './Register';
 import Login from './Login';
 import CheckoutPage from './CheckoutPage';
 import Productlist from './productlist';
-import OrderList from './OrderList';
 
 const App = () => {
 
