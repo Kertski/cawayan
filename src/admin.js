@@ -3,7 +3,6 @@ import { useRef} from 'react';
 import swal from 'sweetalert';
 import Adminhome from './Admin/Adminhome';
 
-<<<<<<< HEAD
 function admin(){
   const email=useRef()
   const password=useRef()
@@ -21,19 +20,6 @@ function admin(){
           button: "ok",
         });
       }
-=======
-
-function admin() {
-  return (
-
-    <div>
-        <AdminHeader/>
-        
-        <Footer/>
-    
-    </div>
-    )
->>>>>>> 0139340e37722850f60f10cf70de453a25709c27
   }
  
   return(

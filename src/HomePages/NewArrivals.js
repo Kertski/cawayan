@@ -14,12 +14,6 @@ function NewArrivals({handleClick}) {
         });
     },[]);
 
-<<<<<<< HEAD
-    
-
-
-=======
->>>>>>> 0139340e37722850f60f10cf70de453a25709c27
   return (
     
     <div>
