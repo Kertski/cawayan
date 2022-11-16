@@ -7,7 +7,6 @@ function Cart({cart, setCart, handleChange}) {
     const [shipping, setShipping] = useState(0);
     const [discount, setDiscount] = useState(0);
     const [total, setTotal] = useState(0);
-    let qty = 1;
 
     const handleTotal = () => {
 
@@ -19,7 +18,7 @@ function Cart({cart, setCart, handleChange}) {
     const handlePrice = ()=> {
         let ans = 0;
         cart.map((item)=>(
-            ans += item.Sold * item.Price
+            ans += item.Amount * item.Price
         ))
         setPrice(ans);
     }
@@ -27,7 +26,7 @@ function Cart({cart, setCart, handleChange}) {
     const handleShipping = () => {
         let sf = 0;
         cart.map((item)=>(
-            sf += item.Sold * 100
+            sf += item.Amount * 100
           
         ))
         setShipping(sf >= 500 ? 0 : sf);
@@ -36,7 +35,7 @@ function Cart({cart, setCart, handleChange}) {
     const handleDiscount = () => {
         let dc = 0;
         cart.map((item)=>(
-            dc += item.Sold * 20
+            dc += item.Amount * 20
         ))
         setDiscount(dc >= 500 ? 500 : dc);
     }
@@ -83,11 +82,11 @@ function Cart({cart, setCart, handleChange}) {
                                 </div>
                                 <div>
                                     <button className='qtybtn' onClick={() => handleChange(item, 1)}> + </button>
-                                    <button className='qtybtn'>{item.Sold}</button>
+                                    <button className='qtybtn'>{item.Amount}</button>
                                     <button className='qtybtn' onClick={() => handleChange(item, -1)}> - </button>
                                 </div>
                                 <div>
-                                    <span>Php {item.Price*item.Sold}</span>
+                                    <span>Php {item.Price*item.Amount}</span>
                                     <button onClick={()=>handleRemove(item.id)}>Remove</button>
                                 </div>
                             </div>
