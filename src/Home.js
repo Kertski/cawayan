@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import BannerSlide from './HomePages/BannerSlide';
 import BestSellers from './HomePages/BestSellers';
 import ComingSoon from './HomePages/ComingSoon';
@@ -18,10 +18,7 @@ function Home({handleClick, cart, warning}) {
       <Header size={cart.length} cart={cart}/>
       
       <BannerSlide/>
-      <NewArrivals handleClick={handleClick}/>
-      {
-        warning && <div className='warning'>Item is already added to your cart</div>
-      }
+      <NewArrivals handleClick={handleClick} warning={warning}/>
       <BestSellers/>
       <CustomerReviews/>
       <ComingSoon/>

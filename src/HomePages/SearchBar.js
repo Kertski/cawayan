@@ -36,7 +36,6 @@ function SearchBar() {
             setFilterData([]);
             setWordEntered("");
         }
-    
 
   return (
     <div className="search">
@@ -51,10 +50,9 @@ function SearchBar() {
         {filterData.slice(0, 8).map((item) => {
             return (
                 <div className='dataItemContainer'>
-                    <div className='dataItem' >{ item.Description}</div>
+                    <div><a href='/ProductInfo' className='dataItem' item={item} key={item.id}>{ item.Description}</a></div>
                 </div>
             )
-
         })}
       </div>
       )}

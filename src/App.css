@@ -546,10 +546,7 @@ color:#ffffff;
   margin-right: 1%;
 }
 
-.socialicons4 {
-  height: 30px; 
-  width: 30px;
-}
+.warning
 
 .whattoget {
   font-size: 13px;
@@ -670,6 +667,13 @@ color:#ffffff;
   color: hsl(94, 75%, 22%);
 }
 
+.cartpromo {
+  color: black;
+  background-color: hsl(49, 100%, 50%);
+  padding: 2px;
+  text-align: center;
+}
+
 .cartitems {
   padding: 0px 5px;
   background-color: white;
@@ -738,15 +742,39 @@ color:#ffffff;
     font-weight: bold;
     color: hsl(94, 75%, 22%);
 }
+
 .total{
     display: flex;
     justify-content: space-between;
+
 }
-.total span:nth-child(1){
+.total span:nth-child(1) {
     font-size: 25px;
     color: hsl(94, 75%, 22%);
     font-weight: bold;
+    text-align: left;
+    
+}
 
+.shippingfee {
+    display: flex;
+    justify-content: space-between;
+}
+
+.shippingfee span:nth-child(1){
+    font-size: 20px;
+    color: hsl(94, 75%, 22%);
+    font-weight: bold;
+}
+
+.subtotal {
+  display: flex;
+}
+
+.subtotal span:nth-child(1){
+  font-size: 20px;
+  color: hsl(94, 75%, 22%);
+  font-weight: bold;
 }
 
 .qtybtn {
@@ -763,15 +791,14 @@ color:#ffffff;
 .warning{
   height: 40px;
   width: 250px;
-  position: absolute;
-  right: 0;
-  top: 10%;
+  z-index: 40;
   background-color: rgb(210, 91, 91);
   font-size: 1.1rem;
   color: white;
   font-family: cursive;
   padding: 5px;
   border-radius: 5px;
+  text-align: center;
 }
 
 /* Register */
