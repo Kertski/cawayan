@@ -13,7 +13,6 @@ import Productlist from './productlist';
 import OrderList from './OrderList';
 import Dashboard from './Dashboard';
 import Customer from './Customer';
-import ProductInfo from './ProductInfo';
 
 const App = () => {
 
@@ -60,11 +59,14 @@ const App = () => {
                 <Route path="/cart" element={<Cart cart={cart} setCart={setCart} handleChange={handleChange}/>}/>
                 <Route path="/register" element={<Register/>}/>
                 <Route path="/login" element={<Login/>}/>
-                <Route path="/checkout" element={<CheckoutPage size={cart.length}/>}/>
+                <Route path="/checkout" element={<CheckoutPage cart={cart}/>}/>
                 <Route path="/admin" element={<Admin/>}/>
                 <Route path="/products" element={<Productlist/>}/>
                 
                 <Route path="/orderlist" element={<OrderList/>}/>
+                <Route path="/dashboard" element={<Dashboard/>}/>
+                <Route path="/customers" element={<Customer/>}/>
+
             </Routes>
         </Router>
     </>
