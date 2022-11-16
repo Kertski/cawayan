@@ -5,7 +5,7 @@ import './App.css';
 
 
 
-function OrderList() {
+function Customer() {
   return (
  
 
@@ -14,7 +14,7 @@ function OrderList() {
         
 <div class="container" >
   
-<h1 className="px-3 contactustext "> List of Orders</h1>
+<h1 className="px-3 contactustext "> List of Customers</h1>
 
 <table class="table">
   <thead>
@@ -55,4 +55,4 @@ function OrderList() {
   )
 }
   
-  export default OrderList
+  export default Customer

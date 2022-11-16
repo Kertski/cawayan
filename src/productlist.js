@@ -211,7 +211,7 @@ function productlist(){
                                 <div className=" row text-center">
                                     <div className="col my-3">
                                     <button className="btn btn-primary ms-1" onClick={(event) => addHandler(event)}>Add New Record</button>
-                                        <button className="btn btn-success ms-5 ">Submit</button>
+                                        <button className="btn btn-success ms-5 " >Submit</button>
                                     </div>
                                 </div>
                         
@@ -244,26 +244,23 @@ function productlist(){
                     
                    
    
-                    <div className="card  text-center   " key={item.id}>
+                    <div className="card  text-center" key={item.id}>
                 
-                        < div  >
+                       
                         <div class=" card card-header ">
-                        <div >Description : {item.Description}</div>
+                        <div class="des" >Description : {item.Description}</div>
                         </div>
 
                         <div class="card-body ">
-        
                         <div class="row">
 
-                               <div class="col mt-5 col-sm-6 text-left">
-                        
+                               <div class="col mt-5 col-sm-6 text-left"> 
+                                            
                                <div class="text-left"> Price : ₱{item.Price}</div>
                                 <div class="text-left"> Stock : {item.Stock} PCS
+                                <div>Sold: {item.Sold} PCS</div>
                              <div>Category: {item.Category}</div>
                            <div>Promos: {item.Promos}</div>
-                        
-                        <div>Sold: {item.Sold} PCS</div>
-
                                 </div>
                                 </div>
                               
@@ -272,8 +269,8 @@ function productlist(){
                          <img src={item.Image} className="card-img-top" alt={item.Description} title={item.Description}   style={{width: '30vh',height: '30vh',}}  />
                          </div>
                          </div>
+                         
                         </div>
-                         </div>
                          </div>
                        
                    
@@ -282,8 +279,10 @@ function productlist(){
                       <div class="card-footer ">
                         <button className="btn btn-primary" onClick={(event) => onClickUpdate(event, item)}>Update</button>
                         <button className="btn btn-danger ms-5 " onClick={(event) => onClickDelete(event, item)}>Delete</button>
-                      
-                    </div>
+                        </div>
+                        
+             
+
                     </div>
               
                 );

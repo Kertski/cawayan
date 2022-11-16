@@ -1,9 +1,20 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-
+import swal from 'sweetalert';
 
 
 function AdminHeader() {
+
+    const handleClick=()=>{
+        localStorage.clear();
+        swal({
+            title: "Logout",
+            text: "You are now successfully logged out",
+            icon: "warning",
+            button: "ok",
+          });
+    }
+    
     return (
             <div className='sticky-top'>
                 <header className='header'>
@@ -16,14 +27,14 @@ function AdminHeader() {
                         <div className="collapse navbar-collapse" id="collapsibleNavbar">
                             <ul className="navbar-nav">
                                 <li className="nav-item">
-                                    <Link to="/admin" className='nav-link'>Dashboard</Link></li>
+                                    <Link to="/Dashboard" className='nav-link'>Dashboard</Link></li>
                                 <li className="nav-item">
                                     <Link to="/products" className='nav-link'>Products</Link></li>
                                 <li className="nav-item">
                                 <Link to="/orderlist" className='nav-link'>Orders</Link></li>
                                 <li className="nav-item">
-                                    <a className="nav-link" href=".#blogs">Users</a>
-                                </li>  
+                                <Link to="/customers" className='nav-link'>Customers</Link></li>
+                              
                        
                             </ul>
                         </div>
@@ -34,11 +45,15 @@ function AdminHeader() {
                             
                                 </li>
                                 <li className="nav-item">
-                                    <Link to="/cart" className='nav-link'><i class="fa fa-user"></i></Link>
+                                    <Link to="" className='nav-link'><i class="fa fa-user"></i></Link>
                                 </li>
                                 <li className="nav-item">
-                                    <Link to="/register" className='nav-link'>Admin</Link>
+                                    <Link className='nav-link'>Admin</Link>
                                 </li>
+                                <li className="nav-item">
+                                    <Link to="/admin" onClick={handleClick} className='nav-link'>Logout</Link>
+                                </li>
+                                
                               
                             </ul>
                         </div>

@@ -998,7 +998,58 @@ color:#ffffff;
   }
 }
 
+
+
 .card {
-  margin-bottom: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  text-align: center;
+  background-color: #f1f1f1;
+    column-count: 4;
+    margin-bottom: 10px;
+   
  
-}
+  }
+ 
+  .card-text{
+    font-size: 75px;
+  }
+  .whitetext{
+    color: white;
+  }
+
+  .custreview {
+    background-color: hsl(94, 24%, 53%);
+    color: white;
+  }
+
+  #small {
+    font-size: 10px;
+  }
+  .details{
+
+    font-size: 50px;
+  }
+  .smalldetails{
+    
+    font-size: 25px;
+  }
+
+  .detailsAmount{
+
+    font-size: 40px;
+  }
+  .detailsAmount1{
+
+    font-size: 50px;
+  }
+  .text-left{
+    text-align: left;
+    
+    font-size: 20px;
+  }
+  .des{
+    text-align: Center;
+    
+    font-size: 20px;
+  }

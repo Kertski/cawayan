@@ -11,6 +11,8 @@ import Login from './Login';
 import CheckoutPage from './CheckoutPage';
 import Productlist from './productlist';
 import OrderList from './OrderList';
+import Dashboard from './Dashboard';
+import Customer from './Customer';
 
 const App = () => {
 
@@ -62,6 +64,8 @@ const App = () => {
                 <Route path="/products" element={<Productlist/>}/>
                 
                 <Route path="/orderlist" element={<OrderList/>}/>
+                <Route path="/dashboard" element={<Dashboard/>}/>
+                <Route path="/customers" element={<Customer/>}/>
 
             </Routes>
         </Router>
