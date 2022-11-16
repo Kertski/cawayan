@@ -60,10 +60,10 @@ function Footer() {
                 </div>
                 <div className="row">
                     <div className="col sociallinks">
-                        <a href="https://www.facebook.com" target="_blank" rel='noopener noreferrer'><img class="socialicons1" src="assets\images\icons\Facebook.png" alt=''/></a>
-                        <a href="https://www.instagram.com" target="_blank" rel='noopener noreferrer'><img class="socialicons2" src="assets\images\icons\Instagram.png" alt=''/></a>
-                        <a href="https://www.tiktok.com" target="_blank" rel='noopener noreferrer'><img class="socialicons3" src="assets\images\icons\Tiktok.png" alt=''/></a>
-                        <a href="https://www.pinterest.com" target="_blank" rel='noopener noreferrer'><img class="socialicons4" src="assets\images\icons\Pinterest.png" alt=''/></a>
+                        <a href="https://www.facebook.com" target="_blank" rel='noopener noreferrer'><img className="socialicons1" src="assets\images\icons\Facebook.png" alt=''/></a>
+                        <a href="https://www.instagram.com" target="_blank" rel='noopener noreferrer'><img className="socialicons2" src="assets\images\icons\Instagram.png" alt=''/></a>
+                        <a href="https://www.tiktok.com" target="_blank" rel='noopener noreferrer'><img className="socialicons3" src="assets\images\icons\Tiktok.png" alt=''/></a>
+                        <a href="https://www.pinterest.com" target="_blank" rel='noopener noreferrer'><img className="socialicons3" src="assets\images\icons\Pinterest.png" alt=''/></a>
                     </div>
                 </div>
             </div>

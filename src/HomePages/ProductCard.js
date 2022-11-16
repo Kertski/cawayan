@@ -1,7 +1,8 @@
-import React from 'react'
+import React from 'react';
 
 function ProductCard({item, handleClick}) {
-    const {Id, Image, Description, Price, Stock } = item;
+    const {id, Image, Description, Price, Stock } = item;
+
   return (
     <div className="col-md-8 col-lg-6 col-xl-4">
                         <div className="card text-black">
@@ -14,7 +15,7 @@ function ProductCard({item, handleClick}) {
                                 <p className="text-muted mb-4"> ₱ {Price}.00</p>
                                 <p className="text-muted mb-4">Stocks On Hand :{Stock} PCS</p>
                                 <div className="pb-3">
-                                <div className='d-none'>{Id}</div>
+                                <div className='d-none'>{id}</div>
                                 <span className ="fa fa-star checked"></span>   
                                 <span className ="fa fa-star checked"></span>  
                                 <span className ="fa fa-star checked"></span>  
