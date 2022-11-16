@@ -62,11 +62,15 @@ const App = () => {
                 <Route path="/checkout" element={<CheckoutPage cart={cart}/>}/>
                 <Route path="/admin" element={<Admin/>}/>
                 <Route path="/products" element={<Productlist/>}/>
+<<<<<<< HEAD
                 
                 <Route path="/orderlist" element={<OrderList/>}/>
                 <Route path="/dashboard" element={<Dashboard/>}/>
                 <Route path="/customers" element={<Customer/>}/>
 
+=======
+                <Route path="/orderlist" element={<OrderList/>}/>
+>>>>>>> 0139340e37722850f60f10cf70de453a25709c27
             </Routes>
         </Router>
     </>
