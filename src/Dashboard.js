@@ -1,6 +1,7 @@
 import React, { useState, useEffect} from 'react';
 import AdminHeader from './Admin/AdminHeader'
 import Footer from './HomePages/Footer'
+import ZeroStock from './ZeroStock';
 import './App.css';
 
 
@@ -18,6 +19,19 @@ function Dashboard({item}){
       });
   },[]);
 
+  
+  const [invoice, setInvoice] = useState([]);
+  useEffect(() =>{
+      fetch('http://localhost:8000/invoice')
+      .then(response => response.json())
+      .then(data => {
+        setInvoice(data);
+      })
+      .catch((err) => {
+              console.log(err.message);
+      });
+  },[]);
+
 let Stocktotal = 0
 
 products.forEach(item=>{
@@ -26,20 +40,39 @@ Stocktotal = parseInt(Stocktotal) + parseInt(item.Stock)
 const formattedStock  = Stocktotal.toLocaleString();
 
 let Sales = 0
-products.forEach(item=>{
-Sales = parseInt(Sales) + parseInt(item.Amount)
+invoice.forEach(invoice =>{
+Sales = parseInt(Sales) + parseInt(invoice.sales)
 });
 const salesAmount  = Sales.toLocaleString();
 
 let Sold = 0
-products.forEach(item=>{
-  Sold = parseInt(Sold) + parseInt(item.Sold)
+invoice.forEach(invoice=>{
+  Sold = parseInt(Sold) + parseInt(invoice.totalpcs)
 });
 const salesSold  = Sold.toLocaleString();
+// eslint-disable-next-line 
+let zero = products.filter(item=>item.Stock == 0)
 
 
+let Onehundred = products.filter(item=>item.Stock > 99)
+
+let filterZero = zero.length
+let filterOnehundred  = Onehundred.length
+
+let plus = Onehundred.length +  zero.length
+
+let filterAverage  = products.length - plus
+
+console.log(filterZero)
+
+ 
+const onClickUpdate= (event, item) => {
 
 
+          window.location.reload();
+
+   
+}
 
   return (
 
@@ -169,16 +202,38 @@ const salesSold  = Sold.toLocaleString();
               </thead>
               <tbody>
                 <tr className="whitetext bg-danger ">
-                  <th scope="row" class="text-warning">Out of Stock</th>
-                  <td className="text-warning">2</td>
+                  <th scope="row" class="text-warning" data-bs-toggle="modal" data-bs-target="#search" >Out of Stock</th>
+                  <td className="text-warning">{filterZero}</td>
+                
+                  <div class="modal fade modal-fullscreen" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" id="search">
+                  <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+
+                  
+
+                      <div class="modal-body">
+                      <ZeroStock/>
+                      </div>
+                      
+                      <div class="modal-footer">
+                        
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" onClick={(event) => onClickUpdate(event, item)}>Close</button>
+                        
+                      </div>
+                      
+                    </div>
+                  </div>
+                </div>
+
                 </tr>
+                
                 <tr>
                   <th scope="row">Average Stock</th>
-                  <td>5</td>
+                  <td>{filterAverage}</td>
                 </tr>
                 <tr>
                 <th scope="row">Slow Moving</th>
-                  <td>6</td>
+                  <td>{filterOnehundred}</td>
                 </tr>
               </tbody>
             </table>
@@ -203,7 +258,7 @@ const salesSold  = Sold.toLocaleString();
                   </div>
             
                   <div class="col">
-                  <p class="card-text detailsAmount">{salesSold}<small  className="smalldetails"> PCS</small> </p>
+                  <p class="card-text detailsAmount">{salesSold}<small  className="smalldetails2"> PCS</small> </p>
                   </div>
                   <p class="card-text detailsAmount1"><small>₱</small> {salesAmount}</p>
            

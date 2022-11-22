@@ -9,15 +9,15 @@ function admin(){
   const getEmail=localStorage.getItem("emailData")
   const getPassword=localStorage.getItem("passwordData")
   const handleSubmit=()=>{
-      if(email.current.value==="admin@cawayan.com"&&password.current.value==="12345"){
-          localStorage.setItem("emailData","admin@cawayan.com")
+      if(email.current.value==="admin-cawayan"&&password.current.value==="12345"){
+          localStorage.setItem("emailData","admin-cawayan")
           localStorage.setItem("passwordData","12345")
       }else{
         swal({
           title: "Wrong User ID or Password",
-       
           icon: "warning",
           button: "ok",
+          timer: 4000000,
         });
       }
   }
@@ -44,6 +44,9 @@ function admin(){
                 <label className="form-label namelabel">User ID :</label>
                     <input  className="form-control"  type="text" ref={email}  />
                 </div>
+
+
+                
                 <div>
                 <label className="form-label namelabel">Password:</label>
                     <input type="password" className="form-control" ref={password} />

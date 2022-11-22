@@ -1061,6 +1061,10 @@ color:#ffffff;
     
     font-size: 25px;
   }
+  .smalldetails2{
+    
+    font-size: 15px;
+  }
 
   .detailsAmount{
 
@@ -1077,6 +1081,57 @@ color:#ffffff;
   }
   .des{
     text-align: Center;
-    
-    font-size: 20px;
+    color: hsl(94, 75%, 22%);
+    font-size: 25px;
   }
+  .admincontainer {
+    border: hsl(94, 75%, 22%); border-radius: 5%;
+    color: hsl(94, 75%, 22%);
+    font-size: 25px;
+    text-align: center;
+    margin-right: 0;
+  }
+
+  
+  .OR{
+    text-align: center;
+    margin-left: 250px;
+  }
+  .prodcont{
+    background-color: #f4fcf4;
+    color: black;
+  }
+
+  .blackfnt{
+    font-size: 20px;
+   
+    color: black;
+  }
+
+  .greenfnt{
+    font-size: 16px;
+   
+   justify-content: center;
+    color: hsl(94, 75%, 22%);
+  }
+  .sort{
+    padding-left: 22px;
+   
+  }
+
+  .overflow-scroll {
+    scrollbar-color: lightgreen;
+  
+  }
+
+  .modal.modal-fullscreen .modal-dialog {
+    width: 80vw;
+    height: 85vh;
+    margin-left: 100px;
+    padding: 0;
+    max-width: none; 
+    justify-content: center;
+    position: absolute;
+
+  }
+  
