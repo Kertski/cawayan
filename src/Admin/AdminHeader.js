@@ -7,6 +7,7 @@ function AdminHeader() {
 
     const handleClick=()=>{
         localStorage.clear();
+        
         swal({
             title: "Logout",
             text: "You are now successfully logged out",
@@ -35,6 +36,7 @@ function AdminHeader() {
                                 <li className="nav-item">
                                 <Link to="/customers" className='nav-link'>Customers</Link></li>
                               
+                              
                        
                             </ul>
                         </div>
@@ -45,10 +47,12 @@ function AdminHeader() {
                             
                                 </li>
                                 <li className="nav-item">
+                                    <Link to="/" className='nav-link'>Go to Home Page</Link></li>
+                                <li className="nav-item">
                                     <Link to="" className='nav-link'><i class="fa fa-user"></i></Link>
                                 </li>
                                 <li className="nav-item">
-                                    <Link className='nav-link'>Admin</Link>
+                                    <Link to="/admin" className='nav-link'>Admin</Link>
                                 </li>
                                 <li className="nav-item">
                                     <Link to="/admin" onClick={handleClick} className='nav-link'>Logout</Link>

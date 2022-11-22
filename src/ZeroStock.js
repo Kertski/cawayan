@@ -1,8 +1,7 @@
 import React, { useState, useEffect} from 'react';
 import swal from 'sweetalert';
 import './App.css';
-import AdminHeader from './Admin/AdminHeader'
-import Footer from './HomePages/Footer'
+
 
 
 
@@ -63,14 +62,14 @@ function productlist(){
                 title: "Update Products",
                 text: "Product successfully updated!",
                 icon: "success",
-                button: "Back to Product Maintenance",
+                button: "OK",
               });
         }else{
             swal({
                 title: "Add Products",
                 text: "Product successfully added!",
                 icon: "success",
-                button: "Back to Product Maintenance",
+                button: "Go to Product Maintenance",
               });
         }
         })
@@ -79,10 +78,7 @@ function productlist(){
         });
     }
     
-    const addHandler = (event) => {
-        console.log('test'); 
-        setFormFields({id:0, Description: "", Price: 0, Stock: 0, Category: "" ,  Image: "http://localhost:8000/upload/" ,  Promos: "0" ,  Sold: 0});
-    }
+    
     const onClickDelete = (event, item) => {
         fetch("http://localhost:8000/products/" + item.id,{method:'Delete'})
             .then(response => response.json())
@@ -92,7 +88,7 @@ function productlist(){
                     title: "Deleted",
                     text: "Product successfully deleted!",
                     icon: "warning",
-                    button: "Back to Product Maintenance",
+                    button: "Go to Product Maintenance",
                   });
             })
             .catch((err) => {
@@ -128,26 +124,26 @@ function productlist(){
 
   return (
     <div >
-    <AdminHeader/>
+   
         <div className="row justify-content-center g-3">
         <div className="col col-md-10 col-sm-12">
 
             <section className="pt-5 pb-5">
             <div className="container contactcontainer">
-                <h1 className="px-3 contactustext"> Product Maintenance</h1>
+                <h1 className="px-3 contactustext"> Out of Stock Items</h1>
                 
                     </div>
-                <div className="container"  >
+             
                     <div className="row " >
                         <div className="col col-sm-6 ">
                             <form onSubmit={onHandleSubmit} className="border p-5 pb-0 m-3 text-white rounded prodcont"  >
                    
                
                                 <div className="row">
-                                    <div className="col my-3">
+                                    <div className="col my-4">
                                     <input type="hidden" value={formFields.id}/>
                                         <label className="form-label namelabel blackfnt">Description :</label>
-                                        <input type="text" className="form-control" name="Description" value={formFields.Description}  onChange={handleChange} required/>
+                                        <input type="text" className="form-control" name="Description" value={formFields.Description}  onChange={handleChange} disabled/>
                                     </div>
                                 </div>
                              
@@ -163,7 +159,7 @@ function productlist(){
                              <div class="col">
                                 <div class="col my-3">
                                 <label className="form-label namelabel blackfnt">Price :</label>
-                                <input type="Number" className="form-control" name="Price" value={formFields.Price}  min="0" onChange={handleChange} required/>
+                                <input type="Number" className="form-control" name="Price" value={formFields.Price}  min="0" onChange={handleChange} disabled/>
                                 </div>
                                 </div>
 
@@ -177,8 +173,8 @@ function productlist(){
                                 <div class="col">
                                 <div class="col my-3">
                                 <label className="form-label namelabel blackfnt">Category :</label>
-                                        <input   type="hidden" className="form-control" name="Category" value={formFields.Category}  onChange={handleChange} required/>
-                                        <select  className="form-control" name="Category" value={formFields.Category}  onChange={handleChange} required>
+                                        <input   type="hidden" className="form-control" name="Category" value={formFields.Category}  onChange={handleChange} disabled/>
+                                        <select  className="form-control" name="Category" value={formFields.Category}  onChange={handleChange} disabled>
                                         <option value=""> -- Please Select</option>
                                             <option value="NewArrivals">New Arrivals</option>
                                             <option value="BestSeller4">Best Seller</option>
@@ -194,47 +190,19 @@ function productlist(){
                           
                               
 
-                                <div className="row">
-                                <div className="col my-3">
-                                <label className="form-label namelabel blackfnt">Photo:</label>
-                                <div className="row">
-                                <div className="col-4">
-                                <label className="form-label namelabel blackfnt">Upload on file:</label>
-                                </div>
-                                <div className="col-8">
-                                <input type="file" class="form-control" id="customFile" />
-                                </div>
-                                </div>
-
-                                <div>
-                                <label className="OR form-label namelabel blackfnt">OR</label>
-                                </div>
-
-                                <div className="row  ">
-                                <div className="col-3">
-                                <label className="form-label namelabel blackfnt">Image Path:</label>
-                                </div>
-                                <div className="col-9">
-                                <input   type="text" className="form-control" name="Image" value={formFields.Image}  onChange={handleChange} required/>
-                                </div>
-                                </div>
-
-
-                                    </div>
-                                </div>
 
                                 <div class="row">
                              <div class="col">
                                 <div class="col my-3">
                                 <label className="form-label namelabel blackfnt">Promos :</label>
-                                        <input   type="text" className="form-control" name="Promos" value={formFields.Promos}  onChange={handleChange} required/>
+                                        <input   type="text" className="form-control" name="Promos" value={formFields.Promos}  onChange={handleChange} disabled/>
                                 </div>
                                 </div>
 
                                 <div class="col">
                                 <div class="col my-3">
                                 <label className="form-label namelabel blackfnt">Sold :</label>
-                                        <input   type="number" min="0" className="form-control" name="Sold" value={formFields.Sold}  onChange={handleChange} required/>
+                                        <input   type="number" min="0" className="form-control" name="Sold" value={formFields.Sold}  onChange={handleChange} disabled/>
                                 </div>
                                 </div>
                                 </div>
@@ -244,7 +212,7 @@ function productlist(){
                                 
                                 <div className=" row text-center">
                                     <div className="col my-3">
-                                    <button className="btn btn-primary ms-1" onClick={(event) => addHandler(event)}>Add New Record</button>
+                                 
                                         <button className="btn btn-success ms-5 " >Submit</button>
                                     </div>
                                 </div>
@@ -272,37 +240,21 @@ function productlist(){
             <label className="form-label namelabel ">Sort By Stocks : </label>
            
          
-                   <div class="form-check form-check-inline mx-1">
-                    <input class="form-check-input" type="radio" name="Stocks" id="All" value="ALL"  />
-                    <label class="form-check-label greenfnt" for="All">All</label>
-                    </div>
-
-                  <div class="form-check form-check-inline mx-1">
-                    <input class="form-check-input" type="radio" name="Stocks" id="SlowMove" value="SlowMove"/>
-                    <label class="form-check-label greenfnt" for="SlowMove">Slow Moving Stocks </label>
-                    </div>
+                 
 
                     <div class="form-check form-check-inline mx-1">
-                    <input class="form-check-input" type="radio" name="Stocks" id="Average" value="Average" />
-                    <label class="form-check-label greenfnt" for="Average">Average Stocks</label>
-                    </div>
-
-                    <div class="form-check form-check-inline mx-1">
-                    <input class="form-check-input" type="radio" name="Stocks" id="OutStock" value="0"/>
+                    <input class="form-check-input" type="radio" name="Stocks" id="OutStock" value="0" checked/>
                     <label class="form-check-label greenfnt" for="OutStock">Out of Stocks</label>
                     </div>
                    
             </div>
 
           </div>
-                        <div className="scroll overflow-scroll rounded me-2"    style={{height: '60vh', }}>
+                        <div className="scroll overflow-scroll rounded me-2"    style={{height: '70vh', }}>
                            
-                            {product.filter((item) => {
-                return search.toLowerCase() === ''
-                  ? item
-                  : item.Description.toLowerCase().includes(search);
-              })
-                            .map((item,)=>{
+                           
+                      
+                            { product.filter(item=>item.Stock == 0).map((item,)=>{
                                 
                 return (
                     
@@ -355,10 +307,10 @@ function productlist(){
                         </div>
                         </div>
                 </div>
-            </div>
+          
             </section>
             </div>
-        <Footer/>
+   
         </div>
     </div>
   )
