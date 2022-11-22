@@ -29,7 +29,7 @@ function NewArrivals({handleClick, warning}) {
       
                 {products.filter(products => products.Category  ===  "NewArrivals").map((item)=>{
                 return (
-                    <ProductCard key={item.id} item={item} handleClick={handleClick}/>
+                    <ProductCard  key={item.id} item={item} handleClick={handleClick}/>
                      );
                     })}    
                 {

@@ -324,6 +324,16 @@ a {
   background-color: hsl(49, 100%, 50%) !important;
 }
 
+.prodtitlehref  {
+  text-decoration: none;
+  color: black;
+}
+
+.prodtitlehref:hover {
+  color: hsl(94, 75%, 22%);
+}
+
+
 @media screen and (max-width: 992px) {
 .giftimg {
   display: none !important;
@@ -903,6 +913,16 @@ color:#ffffff;
   color: hsl(94, 75%, 22%);
 }
 
+.successlogincont {
+  margin-top: 300px;
+  margin-bottom: 300px;
+  text-align: center;
+}
+
+.scslogintxt {
+  color: hsl(94, 75%, 22%);
+}
+
 /* Checkout */
 
 .checkoutcontainer {
@@ -976,6 +996,57 @@ color:#ffffff;
   color:hsl(94, 75%, 22%);
 }
 
+/* Product Details */
+
+.prodtitle {
+text-align: center;
+}
+
+.proddetailscont {
+  background-color: white;
+  border-radius: 5px;
+}
+
+.img-prod {
+  justify-content: center;
+  text-align: center;
+  margin-left: 30%;
+}
+
+
+.card-img-prod {
+  display: flex;
+  width:70%;
+  
+}
+
+.fa-square {
+  color: rgb(194, 122, 29);
+  font-size: 30px;
+}
+
+.fa-square-images1 {
+ color: brown;
+ font-size: 150px;
+ padding-right: 5px;
+
+}
+.fa-square-images2 {
+color: rgb(184, 109, 12);
+font-size: 150px;
+padding-right: 5px;
+
+}
+.fa-square-images3 {
+color: rgb(218, 159, 104);
+font-size: 150px;
+}
+
+.prodbtn {
+  margin-left: 30%;
+}
+
+
 @media screen and (max-width: 782px) {
   .navbar-links {
     display: none !important;
@@ -1025,30 +1096,27 @@ color:#ffffff;
   }
 }
 
-
-
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   padding: 16px;
   text-align: center;
   background-color: #f1f1f1;
-    column-count: 4;
-    margin-bottom: 10px;
-   
+  column-count: 4;
+  margin-bottom: 10px;
+}
  
-  }
- 
-  .card-text{
-    font-size: 75px;
-  }
-  .whitetext{
-    color: white;
-  }
+.card-text{
+  font-size: 75px;
+}
 
-  .custreview {
-    background-color: hsl(94, 24%, 53%);
-    color: white;
-  }
+.whitetext{
+  color: white;
+}
+
+.custreview {
+  background-color: hsl(94, 24%, 53%);
+  color: white;
+}
 
   #small {
     font-size: 10px;

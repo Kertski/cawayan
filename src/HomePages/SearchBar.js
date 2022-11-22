@@ -41,8 +41,10 @@ function SearchBar() {
     <div className="search">
       <div className="seachInputs">
         <div>
-            <input type="text" value={wordEntered} placeholder="Search a product" onChange={handleFilter}/>
+            <form onSubmit={(e) => e.preventDefault()}>
+            <input type="text"  value={wordEntered} placeholder="Search a product" onChange={handleFilter}/>
             {wordEntered.length === 0 ? <FontAwesomeIcon icon={faMagnifyingGlass} className="fa-magnifying-glass" /> : <FontAwesomeIcon icon={faX} className='fa-delete' onClick={clearInput} id="clearBtn"/>}
+            </form>
         </div>
       </div>
       {filterData.length !== 0 && (
@@ -50,7 +52,7 @@ function SearchBar() {
         {filterData.slice(0, 8).map((item) => {
             return (
                 <div className='dataItemContainer'>
-                    <div><a href='/ProductInfo' className='dataItem' item={item} key={item.id}>{ item.Description}</a></div>
+                    <a href={item.URL} className='dataItem' item={item} key={item.id}>{ item.Description}</a>
                 </div>
             )
         })}

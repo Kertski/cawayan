@@ -7,12 +7,36 @@ function Cart({cart, setCart, handleChange}) {
     const [shipping, setShipping] = useState(0);
     const [discount, setDiscount] = useState(0);
     const [total, setTotal] = useState(0);
+    const [formFields, setFormFields] = useState(0);
 
     const handleTotal = () => {
 
         let sum = price + shipping - discount; 
         setTotal(sum);
 
+    }
+
+    const onHandleSubmit = (event) => {
+        event.preventDefault();
+        let id = formFields.id;
+        let method = 'POST';
+        fetch("http://localhost:8000/checkoutlists/" + id, 
+        {method: method, 
+        body: JSON.stringify(formFields),
+        headers:{'Content-type': 'application/json; charset=UTF-8',},
+        })
+        .then(response => response.json())
+        .then(data => {
+            setFormFields(data);
+        })
+        .catch((err) => {
+                console.log(err.message);
+        });
+    }
+
+    const handleOnClick = () => {
+        console.log('test'); 
+        setFormFields({id:0, Price: 0, Shipping: 0, Discount: 0 ,  Total: 0});
     }
 
     const handlePrice = ()=> {
@@ -61,7 +85,6 @@ function Cart({cart, setCart, handleChange}) {
         handleTotal();
     })
 
-
   return (
     <div>
         <Header size={cart.length}/>
@@ -92,22 +115,24 @@ function Cart({cart, setCart, handleChange}) {
                             </div>
                             )})
                         }
-                         <div className='subtotal'>
-                            <span>Subtotal: ₱ {price.toFixed(1)}</span>
-                        </div>
-                        <div className='shippingfee'>
-                            <span>Shipping Fee: ₱ {shipping.toFixed(1)} </span>
-                        </div>
-                        <div className='shippingfee'>
-                            <span>Discount: ₱ {discount.toFixed(1)} </span>
-                        </div>
-                        <div className='total'>
-                            <span>Total: ₱ {total.toFixed(1)}</span>
-                        </div>
-                        
-                        <div className="col-6">
-                        <button className="btn btn-warning checkoutbtn" disabled>Check Out</button>
-                        </div>
+                        <form onSubmit={onHandleSubmit}>
+                            <div className='subtotal'>
+                                <span>Subtotal: ₱ {price.toFixed(1)}</span><input type="text" className="form-control" value={formFields.price} hidden/>
+                            </div>
+                            <div className='shippingfee'>
+                                <span>Shipping Fee: ₱ {shipping.toFixed(1)}</span><input type="text" className="form-control" value={formFields.shipping} hidden/>
+                            </div>
+                            <div className='shippingfee'>
+                                <span>Discount: ₱ {discount.toFixed(1)}</span><input type="text" className="form-control" value={formFields.discount} hidden/>
+                            </div>
+                            <div className='total'>
+                                <span>Total: ₱ {total.toFixed(1)}</span><input type="text" className="form-control" value={formFields.total} hidden/>
+                            </div>
+                            
+                            <div className="col-6">
+                            <a href="./checkout"><button type="submit" className="btn btn-warning checkoutbtn" onClick={handleOnClick}>Check Out</button></a>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </section>

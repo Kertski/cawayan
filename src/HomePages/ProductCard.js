@@ -1,17 +1,18 @@
 import React from 'react';
 
 function ProductCard({item, handleClick}) {
-    const {id, Image, Description, Price, Stock } = item;
+    const {id, Image, Description, Price, Stock, URL } = item;
 
   return (
-    <div className="col-md-8 col-lg-6 col-xl-4">
+    <div className="col-md-8 col-lg-6 col-xl-4 d-flex">
                         <div className="card text-black">
                             <div className="cardcontent">
-                            <img src={Image} className="card-img-top" alt={Description} title={Description} />
+                            <a href={URL}><img src={Image} className="card-img-top" alt={Description} title={Description} />
+                            </a>
                             </div>
                             <div className="card-body">
                                 <div className="text-center">
-                                <h5 className="card-title">{Description}</h5>
+                                <a href={URL} className="prodtitlehref"><h5 className="card-title">{Description}</h5></a>
                                 <p className="text-muted mb-4"> ₱ {Price}.00</p>
                                 <p className="text-muted mb-4">Stocks On Hand :{Stock} PCS</p>
                                 <div className="pb-3">

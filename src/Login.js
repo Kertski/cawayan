@@ -1,79 +1,45 @@
 import React from 'react'
-import { useRef, useState, useEffect} from 'react';
+import { useRef} from 'react';
 import Header from './HomePages/Header'
 import Footer from './HomePages/Footer'
+import swal from 'sweetalert';
 
-const Login = () => {
-    const userRef = useRef();
-    // const errRef = useRef();
+const Login = ({size, cart}) => {
 
-    const [userName, setUserName] = useState('');
-    const [pwd, setPwd] = useState('');
-    // const [errMsg, setErrMsg] = useState('');
-    const [success, setSuccess] = useState(false);
-
-    useEffect(() => {
-        userRef.current.focus();
-    }, [])
-
-    /* useEffect(() => {
-       setErrMsg('');
-     }, [userName, pwd]) */
-
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-        console.log(userName, pwd);
-        setPwd('');
-        setSuccess(true);
-    }
-
-    /* const handleSubmit = async (e) => {
-        e.preventDefault();
-
-        try {
-            const response = await axios.post(LOGIN_URL,
-                JSON.stringify({ userName, pwd }),
-                {
-                    headers: { 'Content-Type': 'application/json' },
-                    withCredentials: true
-                }
-            );
-            console.log(JSON.stringify(response?.data));
-            //console.log(JSON.stringify(response));
-            const accessToken = response?.data?.accessToken;
-            const roles = response?.data?.roles;
-            setAuth({ userName, pwd, roles, accessToken });
-            setUser('');
-            setPwd('');
-            setSuccess(true);
-        } catch (err) {
-            if (!err?.response) {
-                setErrMsg('No Server Response');
-            } else if (err.response?.status === 400) {
-                setErrMsg('Missing Username or Password');
-            } else if (err.response?.status === 401) {
-                setErrMsg('Unauthorized');
-            } else {
-                setErrMsg('Wrong Username or Password');
-            }
-            errRef.current.focus();
+    const userName=useRef()
+    const password=useRef()
+    const getUserName=localStorage.getItem("userNameData")
+    const getPassword=localStorage.getItem("passwordData")
+    const handleSubmit=()=>{
+        if(userName.current.value==="cawayanuser"&&password.current.value==="12345"){
+            localStorage.setItem("userNameData","cawayanuser")
+            localStorage.setItem("passwordData","12345")
+        }else{
+          swal({
+            title: "Wrong Username or Password",
+            icon: "warning",
+            button: "ok",
+          });
         }
-    } */
-
-
+    }
+   
   return (
     <>
         <div>
-            <Header/>
-                {success ? (
-                    <section>
-                        <h1>You are logged in!</h1>
-                        <br />
-                        <p>
-                            <div>Go to Home</div>
-                        </p>
-                    </section>
-                ) : ( 
+            <Header size={cart.length}/>
+            {
+                getUserName&&getPassword ? 
+                <section>
+                <div className='container successlogincont justify-content-center text-align-center'>
+                    <h1 className='scslogintxt'>You are logged in!</h1>
+                    <br />
+                    <p>
+                        <div><a className href='/'>Go to Home</a></div>
+                    </p>
+                </div>
+            </section>
+            :
+
                 <section className="pt-5 pb-5 loginsection">
                     <div className="container logincontainer">
                         {/* <p ref={errRef} className={errMsg ? "errmsg" : "offscreen"} aria-live="assertive">{errMsg}</p> */}
@@ -83,7 +49,7 @@ const Login = () => {
                             <div className="container logincontainer2">
                                 <div className="row">
                                     <div className="col logincol">
-                                        <form className="border p-5 pb-5 m-3 text-white rounded" onSubmit={handleSubmit} action="index.html" target="_blank" method="GET">
+                                        <form className="border p-5 pb-5 m-3 text-white rounded" onSubmit={handleSubmit} method="GET">
                                             <fieldset>
                                                 <legend className="loginlegend">Log Into Your Account</legend>
                                                     <div className="row">
@@ -94,10 +60,9 @@ const Login = () => {
                                                                 type="text" 
                                                                 name="first-name" 
                                                                 id="username"
-                                                                ref={userRef}
+                                                                ref={userName}
                                                                 autoComplete="off"
-                                                                onChange={(e) => setUserName(e.target.value)}
-                                                                value={userName}
+                                                                // onChange={(e) => setUserName(e.target.value)}
                                                                 required/>
                                                         </div>
                                                     </div>
@@ -108,9 +73,8 @@ const Login = () => {
                                                                 className="form-control" 
                                                                 type="password" 
                                                                 id="password" 
-                                                                ref={userRef}
-                                                                onChange={(e) => setPwd(e.target.value)}
-                                                                value={pwd}
+                                                                ref={password}
+                                                                // onChange={(e) => setPwd(e.target.value)}
                                                                 required
                                                             />
                                                         </div>
@@ -129,8 +93,9 @@ const Login = () => {
                                 </div>
                             </div>
                     </div>
-                </section>
-                )}
+                </section> 
+                              
+                }
 
             <Footer/>
         </div>

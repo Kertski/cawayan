@@ -12,7 +12,7 @@ const EMAIL_REGEX = /^(([^<>()\]\\.,;:\s@"]+(\.[^<>()\]\\.,;:\s@"]+)*)|(".+"))@(
 
 // const REGISTER_URL = '/register';
 
-const Register = () => {
+const Register = ({size, cart}) => {
     const userRef = useRef();
 //    const errRef = useRef();
 
@@ -112,13 +112,13 @@ const Register = () => {
         </section>
     ) : ( */
         <div>
-            <Header/>
+            <Header size={cart.length}/>
                 <section className="registersection">
                     <div className="container signupcontainer">
                         <h1 className="px-3 signuptext">Register</h1>
                     </div>
                     <div className="container">
-                        <form className="border p-5 pb-0 m-3 text-white rounded" target="_blank" method="GET">
+                        <form className="border p-5 pb-0 m-3 text-white rounded" method="GET">
                             <fieldset>
                                 <legend className="createacclegend">Create a New Account</legend>
                                     <div className="row">

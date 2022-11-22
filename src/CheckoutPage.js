@@ -1,9 +1,42 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Footer from './HomePages/Footer'
 import Header from './HomePages/Header'
 
 
-function CheckoutPage({size}) {
+function CheckoutPage({size, cart, setCart}) {
+
+const [checkout, setCheckOut] = useState([]);
+
+const getCartList = () => {
+    fetch("http://localhost:8000/orders/")
+    .then(response => response.json())
+    .then(data => {
+        setCart(data);
+    })
+    .catch((err) => {
+            console.log(err.message);
+    });
+}
+
+const getCheckOutList = () => {
+    fetch("http://localhost:8000/checkoutlists/")
+    .then(response => response.json())
+    .then(data => {
+        setCheckOut(data);
+    })
+    .catch((err) => {
+            console.log(err.message);
+    });
+}
+
+
+useEffect(() =>{
+getCartList();
+},[]);
+
+useEffect(() =>{
+getCheckOutList();
+},[]);
 
   return (
     <div>
@@ -60,23 +93,20 @@ function CheckoutPage({size}) {
                                 </div>
                             </div>
                             <div className='col-md-5'>
-                                
+                           { checkout.map((item)=> {
+                                return (
                                     <table className='table table-bordered'>
                                         <thead>
                                             <tr>
-                                                <th width="50%">Product</th>
-                                                <th>Price</th>
-                                                <th>Qty</th>
                                                 <th>Total</th>
                                             </tr>
                                         </thead>
                                         <tbody>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
+                                                <td>{item.Total}</td>
                                         </tbody>
                                     </table>
+                                        )
+                                        })}
                             </div>
                         </div>
                     </div>
