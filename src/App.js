@@ -26,7 +26,7 @@ import Mushroom from './Products/Mushroom';
 import WideHat from './Products/WideHat';
 import BigPendant from './Products/BigPendant';
 import SmallPendant from './Products/SmallPendant';
-import AustriaBag from './Products/AustriaBag';
+import AustriaBag from './AustriaBag';
 import IvoryBag from './Products/IvoryBag';
 import PearlBag from './Products/PearlBag';
 import RattanDuyan from './Products/RattanDuyan';
@@ -38,7 +38,7 @@ const App = () => {
   const [warning, setWarning] = useState(false);
 
   const getOrderList = () => {
-    fetch("http://localhost:8000/orders/")
+    fetch("https://cawayan-api.onrender.com/orders/")
     .then(response => response.json())
     .then(data => {
         setCart(data);
@@ -63,7 +63,7 @@ const App = () => {
         }, 2000);
         return ;
     }
-    fetch("http://localhost:8000/orders/" + id, 
+    fetch("https://cawayan-api.onrender.com/orders/" + id, 
     {method: method, 
     body: JSON.stringify(item),
     headers:{'Content-type': 'application/json; charset=UTF-8',},
