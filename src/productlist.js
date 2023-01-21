@@ -17,7 +17,7 @@ function productlist(){
     },[]);
 
     const getProductlist = () => {
-        fetch("http://localhost:8000/products/")
+        fetch("https://cawayan-api.onrender.com/products/")
         .then(response => response.json())
         .then(data => {
             setProducts(data);
@@ -28,7 +28,7 @@ function productlist(){
     }
 
     const onClickUpdate = (event, item) => {
-        fetch("http://localhost:8000/products/" + item.id)
+        fetch("https://cawayan-api.onrender.com/products/" + item.id)
             .then(response => response.json())
             .then(data => {
                 setFormFields(data);
@@ -49,7 +49,7 @@ function productlist(){
         event.preventDefault();
         let id = formFields.id;
         let method = id > 0 ? 'PUT' : 'POST';
-        fetch("http://localhost:8000/products/" + id, 
+        fetch("https://cawayan-api.onrender.com/products/" + id, 
         {method: method, 
         body: JSON.stringify(formFields),
         headers:{'Content-type': 'application/json; charset=UTF-8',},
@@ -81,10 +81,10 @@ function productlist(){
     
     const addHandler = (event) => {
         console.log('test'); 
-        setFormFields({id:0, Description: "", Price: 0, Stock: 0, Category: "" ,  Image: "http://localhost:8000/upload/" ,  Promos: "0" ,  Sold: 0});
+        setFormFields({id:0, Description: "", Price: 0, Stock: 0, Category: "" ,  Image: "https://cawayan-api.onrender.com/upload/" ,  Promos: "0" ,  Sold: 0});
     }
     const onClickDelete = (event, item) => {
-        fetch("http://localhost:8000/products/" + item.id,{method:'Delete'})
+        fetch("https://cawayan-api.onrender.com/products/" + item.id,{method:'Delete'})
             .then(response => response.json())
             .then(() => {
                 getProductlist();
@@ -106,7 +106,7 @@ function productlist(){
 
     const handleSearch = event => {
         setSearch(event.target.value);
-        fetch("http://localhost:8000/products/Description/" + event.target.value )
+        fetch("https://cawayan-api.onrender.com/products/Description/" + event.target.value )
         .then(response => response.json())
         .then(() => {
             getProductlist();

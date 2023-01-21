@@ -8,7 +8,7 @@ function CheckoutPage({size, cart, setCart}) {
 const [checkout, setCheckOut] = useState([]);
 
 const getCartList = () => {
-    fetch("http://localhost:8000/orders/")
+    fetch("https://cawayan-api.onrender.com/orders/")
     .then(response => response.json())
     .then(data => {
         setCart(data);
@@ -19,7 +19,7 @@ const getCartList = () => {
 }
 
 const getCheckOutList = () => {
-    fetch("http://localhost:8000/checkoutlists/")
+    fetch("https://cawayan-api.onrender.com/checkoutlists/")
     .then(response => response.json())
     .then(data => {
         setCheckOut(data);

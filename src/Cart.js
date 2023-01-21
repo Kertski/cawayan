@@ -20,7 +20,7 @@ function Cart({cart, setCart, handleChange}) {
         event.preventDefault();
         let id = formFields.id;
         let method = 'POST';
-        fetch("http://localhost:8000/checkoutlists/" + id, 
+        fetch("https://cawayan-api.onrender.com/checkoutlists/" + id, 
         {method: method, 
         body: JSON.stringify(formFields),
         headers:{'Content-type': 'application/json; charset=UTF-8',},
