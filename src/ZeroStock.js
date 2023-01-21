@@ -16,7 +16,7 @@ function productlist(){
     },[]);
 
     const getProductlist = () => {
-        fetch("http://localhost:8000/products/")
+        fetch("https://cawayan.onrender.com//products/")
         .then(response => response.json())
         .then(data => {
             setProducts(data);
@@ -27,7 +27,7 @@ function productlist(){
     }
 
     const onClickUpdate = (event, item) => {
-        fetch("http://localhost:8000/products/" + item.id)
+        fetch("https://cawayan.onrender.com//products/" + item.id)
             .then(response => response.json())
             .then(data => {
                 setFormFields(data);
@@ -48,7 +48,7 @@ function productlist(){
         event.preventDefault();
         let id = formFields.id;
         let method = id > 0 ? 'PUT' : 'POST';
-        fetch("http://localhost:8000/products/" + id, 
+        fetch("https://cawayan.onrender.com//products/" + id, 
         {method: method, 
         body: JSON.stringify(formFields),
         headers:{'Content-type': 'application/json; charset=UTF-8',},
@@ -80,7 +80,7 @@ function productlist(){
     
     
     const onClickDelete = (event, item) => {
-        fetch("http://localhost:8000/products/" + item.id,{method:'Delete'})
+        fetch("https://cawayan.onrender.com//products/" + item.id,{method:'Delete'})
             .then(response => response.json())
             .then(() => {
                 getProductlist();
@@ -102,7 +102,7 @@ function productlist(){
 
     const handleSearch = event => {
         setSearch(event.target.value);
-        fetch("http://localhost:8000/products/Description/" + event.target.value )
+        fetch("https://cawayan.onrender.com//products/Description/" + event.target.value )
         .then(response => response.json())
         .then(() => {
             getProductlist();
