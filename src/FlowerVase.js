@@ -25,7 +25,7 @@ function FlowerVase({size, cart}) {
       <Header size={cart.length}/>
         <section>
           <div className='container proddetailscont my-5'>
-              {products.filter(products => products.id  ===  6).map((item)=>{
+              {products.filter(products => products.id  ==  6).map((item)=>{
                 return (     
                   <div className='row'>
                     <div className='col-6'>
