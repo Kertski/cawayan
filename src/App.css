@@ -198,7 +198,7 @@ a {
 
 .carousel-item img {
   width: 100%;
-  opacity: calc(60%) !important;
+  opacity: 100% !important;
 }
 
 .newarrival {
