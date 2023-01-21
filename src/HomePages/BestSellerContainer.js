@@ -24,7 +24,7 @@ function BestSellerContainer({category}) {
                         <div className="col-md-6 col-lg-4 col-xl-3 d-flex">
                             <div className="card text-black">
                                 <div className="cardcontent">
-                                    <img src={item.Image} className="card-img-top" alt={item.Description} title={item.Description} />
+                                    <img src="{item.Image}" className="card-img-top" alt={item.Description} title={item.Description} />
                                 </div>
                                 <div className="card-body">
                                     <div className="text-center">
