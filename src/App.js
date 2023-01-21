@@ -13,24 +13,24 @@ import Productlist from './productlist';
 import OrderList from './OrderList';
 import Dashboard from './Dashboard';
 import Customer from './Customer';
-import EggBasket from './Products/EggBasket'
-import FlatBackHangingBasket from './Products/FlatBackHangingBasket';
-import FlowerPlanter from './Products/FlowerPlanter';
-import RoundedBasket from './Products/RoundedBasket';
-import RegularBasket from './Products/RegularBasket';
-import FlowerVase from './Products/FlowerVase';
-import InvertedUfo from './Products/InvertedUfo';
-import UfoPendant from './Products/UfoPendant';
-import HatPendant from './Products/HatPendant';
-import Mushroom from './Products/Mushroom';
-import WideHat from './Products/WideHat';
-import BigPendant from './Products/BigPendant';
-import SmallPendant from './Products/SmallPendant';
+import EggBasket from './EggBasket'
+import FlatBackHangingBasket from './FlatBackHangingBasket';
+import FlowerPlanter from './FlowerPlanter';
+import RoundedBasket from './RoundedBasket';
+import RegularBasket from './RegularBasket';
+import FlowerVase from './FlowerVase';
+import InvertedUfo from './InvertedUfo';
+import UfoPendant from './UfoPendant';
+import HatPendant from './HatPendant';
+import Mushroom from './Mushroom';
+import WideHat from './WideHat';
+import BigPendant from './BigPendant';
+import SmallPendant from './SmallPendant';
 import AustriaBag from './AustriaBag';
-import IvoryBag from './Products/IvoryBag';
-import PearlBag from './Products/PearlBag';
-import RattanDuyan from './Products/RattanDuyan';
-import BambooMug from './Products/BambooMug';
+import IvoryBag from './IvoryBag';
+import PearlBag from './PearlBag';
+import RattanDuyan from './RattanDuyan';
+import BambooMug from './BambooMug';
 
 const App = () => {
 

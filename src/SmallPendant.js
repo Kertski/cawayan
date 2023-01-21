@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSquare } from '@fortawesome/free-solid-svg-icons';
-import Header from '../HomePages/Header'
-import Footer from '../HomePages/Footer'
+import Header from './HomePages/Header'
+import Footer from './HomePages/Footer'
 
 function SmallPendant({size, cart}) {
 
