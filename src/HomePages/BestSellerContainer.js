@@ -6,7 +6,7 @@ function BestSellerContainer({category}) {
     
     const [products, setProducts] = useState([]);
     useEffect(() =>{
-        fetch('http://cawayan-api.onrender.com/products')
+        fetch('https://cawayan-api.onrender.com/products')
         .then(response => response.json())
         .then(data => {
             setProducts(data);
