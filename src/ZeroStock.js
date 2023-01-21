@@ -254,7 +254,7 @@ function productlist(){
                            
                            
                       
-                            { product.filter(item=>item.Stock == 0).map((item,)=>{
+                            { product.filter(item=>item.Stock === 0).map((item,)=>{
                                 
                 return (
                     
