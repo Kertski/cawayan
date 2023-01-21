@@ -9,7 +9,7 @@ import './App.css';
 function Dashboard({item}){
   const [products, setProducts] = useState([]);
   useEffect(() =>{
-      fetch('http://localhost:8000/products')
+      fetch('https://cawayan-api.onrender.com')
       .then(response => response.json())
       .then(data => {
           setProducts(data);
@@ -22,7 +22,7 @@ function Dashboard({item}){
   
   const [invoice, setInvoice] = useState([]);
   useEffect(() =>{
-      fetch('http://localhost:8000/invoice')
+      fetch('https://cawayan-api.onrender.com')
       .then(response => response.json())
       .then(data => {
         setInvoice(data);

@@ -10,7 +10,7 @@ function BannerSlide() {
                     </div>
                     <div className="carousel-inner d-block">
                         <div className="carousel-item active first-slide">
-                            <img src="assets\images\home\carousel\carousel_main2.png" className="d-block img1" alt=''/>         
+                            <img src="\assets\images\home\carousel\carousel_main2.png" className="d-block img1" alt=''/>         
                     </div>
                         <div className="carousel-item">
                             <img src="assets\images\home\carousel\second.png" className="d-block img2" alt=''/>
