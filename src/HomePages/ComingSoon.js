@@ -9,7 +9,7 @@ function ComingSoon() {
                         <div className="col-md-8 col-lg-6 col-xl-4  d-flex">
                             <div className="card text-black">
                                 <div className="cardcontent">
-                                    <img src="assets\images\home\comingsoon\roundbag.png" className="card-img-top" alt="..."/>
+                                    <img src="assets\images\home\coming_soon\roundbag.jpg" className="card-img-top" alt="..."/>
                                 </div>
                                 <div className="card-body">
                                     <div className="text-center">
@@ -25,7 +25,7 @@ function ComingSoon() {
                         <div className="col-md-8 col-lg-6 col-xl-4  d-flex">
                             <div className="card text-black">
                                 <div className="cardcontent">
-                                    <img src="assets\images\home\comingsoon\carvedeagle.png" className="card-img-top" alt="..."/>
+                                    <img src="assets\images\home\coming_soon\carvedeagle.jpg" className="card-img-top" alt="..."/>
                                 </div>
                                 <div className="card-body">
                                     <div className="text-center">
@@ -41,7 +41,7 @@ function ComingSoon() {
                         <div className="col-md-8 col-lg-6 col-xl-4  d-flex">
                             <div className="card text-black">
                                 <div className="cardcontent">
-                                    <img src="assets\images\home\comingsoon\toycarabao.png" className="card-img-top" alt="..."/>
+                                    <img src="assets\images\home\coming_soon\toycarabao.png" className="card-img-top" alt="..."/>
                                 </div>
                                 <div className="card-body">
                                     <div className="text-center">
