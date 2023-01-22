@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
 
+
 function ProductCard({item, handleClick}) {
     const {id, Image, Description, Price, Stock, URL } = item;
 

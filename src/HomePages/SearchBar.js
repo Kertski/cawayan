@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMagnifyingGlass, faX} from '@fortawesome/free-solid-svg-icons';
 
@@ -52,7 +53,7 @@ function SearchBar() {
         {filterData.slice(0, 8).map((item) => {
             return (
                 <div className='dataItemContainer'>
-                    <a href={item.URL} className='dataItem' item={item} key={item.id}>{ item.Description}</a>
+                    <Link to={URL} className='nav-link dataItem' item={item} key={item.id}>{ item.Description}</Link>
                 </div>
             )
         })}
