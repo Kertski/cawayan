@@ -1,36 +1,36 @@
-import React, {useState} from 'react';
-import './App.css';
+import React, {useState} from 'react'
+import './App.css'
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
-import Home from './Home';
-import About from './About';
-import Contact from './Contact';
-import Cart from './Cart';
-import Admin from './admin';
-import Register from './Register';
-import Login from './Login';
-import CheckoutPage from './CheckoutPage';
-import Productlist from './productlist';
-import OrderList from './OrderList';
-import Dashboard from './Dashboard';
-import Customer from './Customer';
-import EggBasket from './EggBasket';
-import FlatBackHangingBasket from './FlatBackHangingBasket';
-import FlowerPlanter from './FlowerPlanter';
-import RoundedBasket from './RoundedBasket';
-import RegularBasket from './RegularBasket';
-import FlowerVase from './FlowerVase';
-import InvertedUfo from './InvertedUfo';
-import UfoPendant from './UfoPendant';
-import HatPendant from './HatPendant';
-import Mushroom from './Mushroom';
-import WideHat from './WideHat';
-import BigPendant from './BigPendant';
-import SmallPendant from './SmallPendant';
-import AustriaBag from './AustriaBag';
-import IvoryBag from './IvoryBag';
-import PearlBag from './PearlBag';
-import RattanDuyan from './RattanDuyan';
-import BambooMug from './BambooMug';
+import Home from './Home'
+import About from './About'
+import Contact from './Contact'
+import Cart from './Cart'
+import Admin from './admin'
+import Register from './Register'
+import Login from './Login'
+import CheckoutPage from './CheckoutPage'
+import Productlist from './productlist'
+import OrderList from './OrderList'
+import Dashboard from './Dashboard'
+import Customer from './Customer'
+import EggBasket from './EggBasket'
+import FlatBackHangingBasket from './FlatBackHangingBasket'
+import FlowerPlanter from './FlowerPlanter'
+import RoundedBasket from './RoundedBasket'
+import RegularBasket from './RegularBasket'
+import FlowerVase from './FlowerVase'
+import InvertedUfo from './InvertedUfo'
+import UfoPendant from './UfoPendant'
+import HatPendant from './HatPendant'
+import Mushroom from './Mushroom'
+import WideHat from './WideHat'
+import BigPendant from './BigPendant'
+import SmallPendant from './SmallPendant'
+import AustriaBag from './AustriaBag'
+import IvoryBag from './IvoryBag'
+import PearlBag from './PearlBag'
+import RattanDuyan from './RattanDuyan'
+import BambooMug from './BambooMug'
 
 const App = () => {
 
@@ -109,7 +109,7 @@ const App = () => {
                 <Route path="/orderlist" element={<OrderList/>}/>
                 <Route path="/dashboard" element={<Dashboard/>}/>
                 <Route path="/customers" element={<Customer/>}/>
-                <Route path="eggbasket" element={<EggBasket size={cart.length}  cart={cart}/>}/>
+                <Route path="/eggbasket" element={<EggBasket size={cart.length}  cart={cart}/>}/>
                 <Route path="/flatbackhangingbasket" element={<FlatBackHangingBasket cart={cart} />}/>
                 <Route path="/flowerplanter" element={<FlowerPlanter cart={cart}/>}/>
                 <Route path="/roundedbasket" element={<RoundedBasket cart={cart}/>}/>
