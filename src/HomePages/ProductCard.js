@@ -8,9 +8,10 @@ function ProductCard({item, handleClick}) {
   return (
     <div className="col-md-8 col-lg-6 col-xl-4 d-flex">
                         <div className="card text-black">
-                        <Link to={URL} className='nav-link'>
                             <div className="cardcontent">
+                            <Link to={URL}>
                             <img src={Image} className="card-img-top" alt={Description} title={Description}/>
+                            </Link>
                             </div>
                             <div className="card-body">
                                 <div className="text-center">
@@ -31,7 +32,6 @@ function ProductCard({item, handleClick}) {
                                 </div>
                                 </div>
                             </div>
-                            </Link>
                         </div>
                     </div>
   )

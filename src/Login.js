@@ -83,7 +83,10 @@ const Login = ({size, cart}) => {
                                                         <div className="col my-3">
                                                             <button className="btn btn-primary">Log In</button>
                                                             <div className="pt-3">
-                                                                <a href="/register" className="text-black">Register</a>
+                                                            <Link to={'/register'}><a href="/register" className="text-black">Register</a></Link>
+                                                            </div>
+                                                            <div className="pt-3">
+                                                            <Link to={'/admin'}><a href="/register" className="text-black">Login as Admin</a></Link>
                                                             </div>
                                                         </div>
                                                     </div>
