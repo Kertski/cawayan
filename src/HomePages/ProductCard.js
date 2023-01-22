@@ -25,7 +25,7 @@ function ProductCard({item, handleClick}) {
                                 <span className ="fa fa-star checked"></span> (5) 
                                 </div> 
                                 <div>
-                                    <a href="/checkout" className="sliderbtn m-1"><button className="btn click-btn btn-default text-white cobtn-inner">Buy Now</button></a>
+                                <Link to={'/checkout'} className="sliderbtn m-1"><button className="btn click-btn btn-default text-white cobtn-inner">Buy Now</button></Link>
                                     <button className="btn click-btn btn-default text-white atocbtn-inner" onClick={() => handleClick(item)}>Add to Cart</button>
                                 </div>
                                 </div>
