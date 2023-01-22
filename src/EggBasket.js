@@ -4,7 +4,7 @@ import { faSquare } from '@fortawesome/free-solid-svg-icons'
 import Header from './HomePages/Header'
 import Footer from './HomePages/Footer'
 
-function ProductDetails({size, cart}) {
+function EggBasket({size, cart}) {
 
   const [products, setProducts] = useState([]);
 
@@ -76,4 +76,4 @@ function ProductDetails({size, cart}) {
   )
 }
 
-export default ProductDetails
+export default EggBasket
