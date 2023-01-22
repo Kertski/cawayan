@@ -109,7 +109,7 @@ const App = () => {
                 <Route path="/orderlist" element={<OrderList/>}/>
                 <Route path="/dashboard" element={<Dashboard/>}/>
                 <Route path="/customers" element={<Customer/>}/>
-                <Route path="/products/eggbasket" element={<EggBasket size={cart.length}  cart={cart}/>}/>
+                <Route path="eggbasket" element={<EggBasket size={cart.length}  cart={cart}/>}/>
                 <Route path="/flatbackhangingbasket" element={<FlatBackHangingBasket cart={cart} />}/>
                 <Route path="/flowerplanter" element={<FlowerPlanter cart={cart}/>}/>
                 <Route path="/roundedbasket" element={<RoundedBasket cart={cart}/>}/>
