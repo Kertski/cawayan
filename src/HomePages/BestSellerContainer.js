@@ -1,6 +1,6 @@
 import React, { useState, useEffect} from 'react';
 
-function BestSellerContainer(category) {
+function BestSellerContainer({category}) {
 
     const [products, setProducts] = useState([]);
     useEffect(() =>{
