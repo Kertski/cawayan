@@ -1,6 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom'
-
 
 function ProductCard({item, handleClick}) {
     const {id, Image, Description, Price, Stock, URL } = item;
@@ -8,9 +6,9 @@ function ProductCard({item, handleClick}) {
   return (
     <div className="col-md-8 col-lg-6 col-xl-4 d-flex">
                         <div className="card text-black">
-                        <Link to={URL} className='nav-link'>
                             <div className="cardcontent">
-                            <img src={Image} className="card-img-top" alt={Description} title={Description}/>
+                            <a href={URL}><img src={Image} className="card-img-top" alt={Description} title={Description} />
+                            </a>
                             </div>
                             <div className="card-body">
                                 <div className="text-center">
@@ -26,12 +24,11 @@ function ProductCard({item, handleClick}) {
                                 <span className ="fa fa-star checked"></span> (5) 
                                 </div> 
                                 <div>
-                                <Link to={'/checkout'} className="sliderbtn m-1"><button className="btn click-btn btn-default text-white cobtn-inner">Buy Now</button></Link>
+                                    <a href="/checkout" className="sliderbtn m-1"><button className="btn click-btn btn-default text-white cobtn-inner">Buy Now</button></a>
                                     <button className="btn click-btn btn-default text-white atocbtn-inner" onClick={() => handleClick(item)}>Add to Cart</button>
                                 </div>
                                 </div>
                             </div>
-                            </Link>
                         </div>
                     </div>
   )
