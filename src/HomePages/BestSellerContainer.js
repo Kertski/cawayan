@@ -22,11 +22,15 @@ function BestSellerContainer({category}) {
                         <div className="col-md-6 col-lg-4 col-xl-3 d-flex">
                             <div className="card text-black">
                                 <div className="cardcontent">
+                                <Link to={item.URL}>
                                     <img src={item.Image} className="card-img-top" alt={item.Description} title={item.Description} />
+                                </Link>
                                 </div>
                                 <div className="card-body">
                                     <div className="text-center">
+                                    <Link to={item.URL}>
                                     <h5 className="card-title">{item.Description}</h5>
+                                    </Link>
                                         <p className="text-muted mb-4"> ₱ {item.Price}.00</p>
                                         <p className="text-muted mb-4">Stocks On Hand :{item.Stock} PCS</p>
                                     <div className="pb-3">
