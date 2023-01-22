@@ -1,7 +1,7 @@
 import React, { useState, useEffect} from 'react';
 
 
-function BestSellerContainer({category}) {
+function BestSellerContainer(category) {
 
     
     const [products, setProducts] = useState([]);
@@ -19,7 +19,7 @@ function BestSellerContainer({category}) {
     return (
         <>
             <div className="row justify-content-center g-3 d-flex">
-                {products.filter(products => products.Category  == category).map((item)=>{
+                {products.filter(products => products.Category === category).map((item)=>{
                     return (
                         <div className="col-md-6 col-lg-4 col-xl-3 d-flex">
                             <div className="card text-black">
