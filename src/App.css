@@ -297,6 +297,12 @@ a {
   background-color: hsl(94, 75%, 22%);
 }
 
+.card-title {
+  text-decoration: none !important;
+  color: black !important;
+
+}
+
 .article {
   border-radius: 2%;
 }

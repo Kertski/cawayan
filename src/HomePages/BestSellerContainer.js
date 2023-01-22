@@ -29,7 +29,7 @@ function BestSellerContainer({category}) {
                                 </div>
                                 <div className="card-body">
                                     <div className="text-center">
-                                    <Link to={item.URL}>
+                                    <Link to={item.URL} className="card-title">
                                     <h5 className="card-title">{item.Description}</h5>
                                     </Link>
                                         <p className="text-muted mb-4"> ₱ {item.Price}.00</p>
