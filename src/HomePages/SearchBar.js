@@ -53,7 +53,7 @@ function SearchBar() {
         {filterData.slice(0, 8).map((item) => {
             return (
                 <div className='dataItemContainer'>
-                    <Link to={item.url} className='nav-link dataItem' item={item} key={item.id}>{ item.Description}</Link>
+                    <Link to={item.URL} href={item.URL} className='nav-link dataItem'item={item} key={item.id}>{ item.Description}</Link>
                 </div>
             )
         })}
