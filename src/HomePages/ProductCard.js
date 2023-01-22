@@ -7,8 +7,7 @@ function ProductCard({item, handleClick}) {
     <div className="col-md-8 col-lg-6 col-xl-4 d-flex">
                         <div className="card text-black">
                             <div className="cardcontent">
-                            <a href={URL}><img src={Image} className="card-img-top" alt={Description} title={Description} />
-                            </a>
+                            <Link to={URL} className='nav-link'><img src={Image} className="card-img-top" alt={Description} title={Description}/></Link>
                             </div>
                             <div className="card-body">
                                 <div className="text-center">
