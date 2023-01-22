@@ -19,12 +19,12 @@ function BestSellerContainer({category}) {
     return (
         <>
             <div className="row justify-content-center g-3 d-flex">
-                {products.filter(products => products.Category  === category).map((item)=>{
+                {products.filter(products => products.Category  == category).map((item)=>{
                     return (
                         <div className="col-md-6 col-lg-4 col-xl-3 d-flex">
                             <div className="card text-black">
                                 <div className="cardcontent">
-                                    <img src="{item.Image}" className="card-img-top" alt={item.Description} title={item.Description} />
+                                    <img src={item.Image} className="card-img-top" alt={item.Description} title={item.Description} />
                                 </div>
                                 <div className="card-body">
                                     <div className="text-center">
