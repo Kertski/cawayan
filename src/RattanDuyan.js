@@ -4,7 +4,7 @@ import { faSquare } from '@fortawesome/free-solid-svg-icons';
 import Header from './HomePages/Header'
 import Footer from './HomePages/Footer'
 
-function RattanDuyan({size, cart}) {
+function RattanDuyan({cart}) {
 
   const [products, setProducts] = useState([]);
 

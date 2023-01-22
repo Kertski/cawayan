@@ -3,7 +3,7 @@ import Footer from './HomePages/Footer'
 import Header from './HomePages/Header'
 
 
-function CheckoutPage({size, cart, setCart}) {
+function CheckoutPage({size, setCart}) {
 
 const [checkout, setCheckOut] = useState([]);
 

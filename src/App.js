@@ -13,7 +13,7 @@ import Productlist from './productlist';
 import OrderList from './OrderList';
 import Dashboard from './Dashboard';
 import Customer from './Customer';
-import EggBasket from './EggBasket'
+import EggBasket from './EggBasket';
 import FlatBackHangingBasket from './FlatBackHangingBasket';
 import FlowerPlanter from './FlowerPlanter';
 import RoundedBasket from './RoundedBasket';
@@ -110,23 +110,23 @@ const App = () => {
                 <Route path="/dashboard" element={<Dashboard/>}/>
                 <Route path="/customers" element={<Customer/>}/>
                 <Route path="/eggbasket" element={<EggBasket size={cart.length}  cart={cart}/>}/>
-                <Route path="/flatbackhangingbasket" element={<FlatBackHangingBasket size={cart.length} cart={cart} />}/>
-                <Route path="/flowerplanter" element={<FlowerPlanter size={cart.length} cart={cart}/>}/>
-                <Route path="/roundedbasket" element={<RoundedBasket size={cart.length} cart={cart}/>}/>
-                <Route path="/regularbasket" element={<RegularBasket size={cart.length} cart={cart}/>}/>
-                <Route path="/flowervase" element={<FlowerVase size={cart.length} cart={cart}/>}/>
-                <Route path="/invertedufo" element={<InvertedUfo size={cart.length} cart={cart}/>}/>
-                <Route path="/ufopendant" element={<UfoPendant size={cart.length} cart={cart}/>}/>
-                <Route path="/hatpendant" element={<HatPendant size={cart.length} cart={cart}/>}/>
-                <Route path="/mushroom" element={<Mushroom size={cart.length} cart={cart}/>}/>
-                <Route path="/widehat" element={<WideHat size={cart.length} cart={cart}/>}/>
-                <Route path="/bigpendant" element={<BigPendant size={cart.length} cart={cart}/>}/>
-                <Route path="/smallpendant" element={<SmallPendant size={cart.length} cart={cart}/>}/>
-                <Route path="/austriabag" element={<AustriaBag size={cart.length} cart={cart}/>}/>
-                <Route path="/ivorybag" element={<IvoryBag size={cart.length} cart={cart}/>}/>
-                <Route path="/pearlbag" element={<PearlBag size={cart.length} cart={cart}/>}/>
-                <Route path="/rattanduyan" element={<RattanDuyan size={cart.length} cart={cart}/>}/>
-                <Route path="/bamboomug" element={<BambooMug size={cart.length} cart={cart}/>}/>
+                <Route path="/flatbackhangingbasket" element={<FlatBackHangingBasket cart={cart} />}/>
+                <Route path="/flowerplanter" element={<FlowerPlanter cart={cart}/>}/>
+                <Route path="/roundedbasket" element={<RoundedBasket cart={cart}/>}/>
+                <Route path="/regularbasket" element={<RegularBasket cart={cart}/>}/>
+                <Route path="/flowervase" element={<FlowerVase cart={cart}/>}/>
+                <Route path="/invertedufo" element={<InvertedUfo cart={cart}/>}/>
+                <Route path="/ufopendant" element={<UfoPendant cart={cart}/>}/>
+                <Route path="/hatpendant" element={<HatPendant cart={cart}/>}/>
+                <Route path="/mushroom" element={<Mushroom cart={cart}/>}/>
+                <Route path="/widehat" element={<WideHat cart={cart}/>}/>
+                <Route path="/bigpendant" element={<BigPendant cart={cart}/>}/>
+                <Route path="/smallpendant" element={<SmallPendant cart={cart}/>}/>
+                <Route path="/austriabag" element={<AustriaBag cart={cart}/>}/>
+                <Route path="/ivorybag" element={<IvoryBag cart={cart}/>}/>
+                <Route path="/pearlbag" element={<PearlBag cart={cart}/>}/>
+                <Route path="/rattanduyan" element={<RattanDuyan cart={cart}/>}/>
+                <Route path="/bamboomug" element={<BambooMug cart={cart}/>}/>
             </Routes>
         </Router>
     </>

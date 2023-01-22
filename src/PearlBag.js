@@ -4,7 +4,7 @@ import { faSquare } from '@fortawesome/free-solid-svg-icons';
 import Header from './HomePages/Header'
 import Footer from './HomePages/Footer'
 
-function PearlBag({size, cart}) {
+function PearlBag({cart}) {
 
   const [products, setProducts] = useState([]);
 
